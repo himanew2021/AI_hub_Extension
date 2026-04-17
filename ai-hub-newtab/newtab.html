@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>New Tab</title>
+  <link rel="stylesheet" href="newtab.css">
+</head>
+<body>
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+  <div class="bg-grid"></div>
+
+  <header class="header">
+    <div class="header-left">
+      <h1 class="brand">
+        <span class="brand-mark"></span>
+        <span class="brand-text">AI Hub</span>
+      </h1>
+      <p class="greeting" id="greeting"></p>
+      <p class="date" id="date"></p>
+    </div>
+    <div class="header-right">
+      <button id="refreshBtn" class="refresh-btn" title="Refresh all feeds">
+        <span class="refresh-icon">&#x21bb;</span>
+        <span>Refresh</span>
+      </button>
+    </div>
+  </header>
+
+  <div id="offlineBanner" class="offline-banner hidden"></div>
+
+  <main class="dashboard">
+    <section class="column col-news" data-column="news">
+      <h2 class="col-header">
+        <span class="col-dot"></span>
+        <span class="col-name">AI News</span>
+        <span class="col-count" id="count-news"></span>
+      </h2>
+      <div class="col-body" id="col-news">
+        <div class="skeleton-group">
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="column col-youtube" data-column="youtube">
+      <h2 class="col-header">
+        <span class="col-dot"></span>
+        <span class="col-name">AI Videos</span>
+        <span class="col-count" id="count-youtube"></span>
+      </h2>
+      <div class="col-body" id="col-youtube">
+        <div class="skeleton-group">
+          <div class="skeleton-card skeleton-media"></div>
+          <div class="skeleton-card skeleton-media"></div>
+          <div class="skeleton-card skeleton-media"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="column col-hn" data-column="hn">
+      <h2 class="col-header">
+        <span class="col-dot"></span>
+        <span class="col-name">Hacker News</span>
+        <span class="col-count" id="count-hn"></span>
+      </h2>
+      <div class="col-body" id="col-hn">
+        <div class="skeleton-group">
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="column col-arxiv" data-column="arxiv">
+      <h2 class="col-header">
+        <span class="col-dot"></span>
+        <span class="col-name">ArXiv</span>
+        <span class="col-count" id="count-arxiv"></span>
+      </h2>
+      <div class="col-body" id="col-arxiv">
+        <div class="skeleton-group">
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="newtab.js"></script>
+</body>
+</html>

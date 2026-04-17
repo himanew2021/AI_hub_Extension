@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "AI Hub",
+  "version": "1.0",
+  "description": "Replace your new tab with a live AI news, videos, papers, and discussions dashboard",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://techcrunch.com/*",
+    "https://www.theverge.com/*",
+    "https://feeds.arstechnica.com/*",
+    "https://news.mit.edu/*",
+    "https://www.youtube.com/*",
+    "https://hn.algolia.com/*",
+    "https://export.arxiv.org/*",
+    "https://i.ytimg.com/*"
+  ],
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
