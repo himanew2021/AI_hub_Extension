@@ -20,26 +20,27 @@ All data comes from free RSS feeds and public APIs — **no API keys required**.
 | Column       | Sources                                                                 |
 |--------------|-------------------------------------------------------------------------|
 | AI News      | TechCrunch AI, The Verge AI, Ars Technica Tech Lab, MIT News AI         |
-| AI Videos    | Two Minute Papers, Fireship, Matt Wolfe, 3Blue1Brown, AI Epiphany, NetworkChuck |
-| Hacker News  | Algolia HN search (AI / LLM / GPT / Claude / machine learning)          |
+| AI Videos    | Two Minute Papers, Yannic Kilcher, AI Explained, Machine Learning Street Talk, Lex Fridman, Dwarkesh Patel, bycloud |
+| Hacker News  | Algolia `search_by_date` (AI stories, past 7 days, ranked by points)    |
 | ArXiv        | cs.AI, cs.LG, cs.CL categories, sorted by submission date               |
 
 ## Install (unpacked)
 
-1. Open `chrome://extensions/`.
-2. Enable **Developer mode** (toggle in the top-right).
-3. Click **Load unpacked**.
-4. Select the `ai-hub-newtab/` folder.
-5. Open a new tab — the AI Hub dashboard loads.
+1. Clone or download this repo.
+2. Open `chrome://extensions/`.
+3. Enable **Developer mode** (toggle in the top-right).
+4. Click **Load unpacked**.
+5. Select the repo folder (the one containing `manifest.json`).
+6. Open a new tab — the AI Hub dashboard loads.
 
 ## File Structure
 
 ```
-ai-hub-newtab/
+.
 ├── manifest.json     # Manifest V3 config, host permissions, new-tab override
 ├── newtab.html       # Dashboard shell
 ├── newtab.css        # Dark theme, grid layout, responsive breakpoints
-├── newtab.js         # Renders cards, handles refresh, talks to service worker
+├── newtab.js         # Renders cards, parses feeds, handles refresh
 ├── background.js     # Fetches feeds (bypasses CORS), caches for 15 min
 ├── icons/            # 16/48/128 PNG icons
 └── README.md
