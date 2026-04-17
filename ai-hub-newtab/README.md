@@ -1,5 +1,7 @@
 # AI Hub — New Tab
 
+**▶ Demo video:** https://youtu.be/_ZBIHfm-0gg
+
 A Chrome extension (Manifest V3) that replaces the browser's New Tab page with a clean, dark-themed dashboard of the latest AI news, AI YouTube videos, trending Hacker News AI discussions, and recent ArXiv papers.
 
 All data comes from free RSS feeds and public APIs — **no API keys required**.
